@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+    function verificarSenha(senha) {
+
+        const senhaCorreta = "1234";
+        if (senha === senhaCorreta) {
+            return "ACESSO PERMITIDO";
+        } else {
+            return "ACESSO NEGADO";
+        }
+    }
+
+    function main() {
+        
+            let senhaUsuario = prompt("Digite a senha:");
+
+            let mensagem = verificarSenha(senhaUsuario);
+            alert(mensagem);
+           (error) 
+            console.log("Ocorreu um erro: " + error);
+    }
+
+    main();
+
+    </script>
+</body>
+</html>

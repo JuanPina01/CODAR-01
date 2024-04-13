@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+    let soma = 0;
+    let numeros = [];
+
+
+    function solicitarNumero(indice) {
+  if (indice < 6) {
+  
+    const numero = parseFloat(prompt(`Digite o ${indice + 1}º número:`));
+    numeros.push(numero);
+    
+    // Verifica se o número é menor que 72 e o soma, se for o caso
+    if (numero < 72) {
+      soma += numero;
+    }
+
+    solicitarNumero(indice + 1);
+  } else {
+
+    document.write('A soma dos números inferiores a 72 é:', soma, "<br>" );
+    document.write('Todos os números informados foram:', numeros);
+  }
+}
+
+// Inicia a solicitação dos números, começando do índice 0
+solicitarNumero(0);
+
+    </script>
+</body>
+</html>

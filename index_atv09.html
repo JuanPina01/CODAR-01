@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+    function verificarVotacao(anoNascimento, anoAtual) {
+        let idade = anoAtual - anoNascimento;
+        if (idade >= 16) {
+            return "Você pode votar este ano!";
+        } else {
+            return "Você não pode votar este ano. Volte quando tiver 16 anos de idade.";
+        }
+    }
+
+    function main() {
+        try {
+            let anoNascimento = parseInt(prompt("Digite o ano de nascimento:"));
+            let anoAtual = parseInt(prompt("Digite o ano atual:"));
+
+            let mensagem = verificarVotacao(anoNascimento, anoAtual);
+            alert(mensagem);
+        } catch (error) {
+            console.log("Ocorreu um erro: " + error);
+        }
+    } 
+
+    </script>
+</body>
+</html>
